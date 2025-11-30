@@ -15,7 +15,7 @@
     }
     header {
       background-color: #ffffff;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -29,8 +29,10 @@
       padding: 0;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: #1e2a38;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
     main {
       max-width: 1200px;
@@ -73,20 +75,27 @@
       width: 100%;
       display: block;
     }
-    .contact p {
-      margin: 0.5rem 0;
-      font-size: 1rem;
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
     }
-    a {
-      color: #2980b9;
+    .contact a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+    .contact img {
+      height: 32px;
+      width: 32px;
     }
     @media (max-width: 600px) {
       header { flex-direction: column; }
       header h1 { text-align: center; }
+      .contact { flex-direction: column; gap: 1rem; }
     }
   </style>
 </head>
@@ -119,11 +128,10 @@
   </section>
 
   <section class="contact">
-    <h2>تماس با ما</h2>
-    <p>📞 تلفن: 06633208608</p>
-    <p>📱 واتس‌اپ: 09945158262</p>
-    <p>📍 آدرس: خرم‌آباد - خیابان جلال آل احمد</p>
-    <p>اینستاگرام: <a href="https://instagram.com/kohandejnovin" target="_blank">@kohandejnovin</a></p>
+    <a href="tel:06633208608"><img src="public/icons/phone.png" alt="تلفن"></a>
+    <a href="https://wa.me/09945158262" target="_blank"><img src="public/icons/whatsapp.png" alt="واتس‌اپ"></a>
+    <a href="https://instagram.com/kohandejnovin" target="_blank"><img src="public/icons/instagram.png" alt="اینستاگرام"></a>
+    <a href="#"><img src="public/icons/location.png" alt="آدرس"></a>
   </section>
 </main>
 
