@@ -17,15 +17,17 @@ export default function Home() {
 
       <section>
         <h2 style={{ color: "#34495e" }}>پروژه‌ها</h2>
-        <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
-          <div>
-            <img src="/projects/project1.jpg" alt="پروژه اول" style={{ width: "300px", borderRadius: "8px" }} />
-            <p>اجرای جدول کیلومتری</p>
-          </div>
-          <div>
-            <img src="/projects/project2.jpg" alt="پروژه دوم" style={{ width: "300px", borderRadius: "8px" }} />
-            <p>پروژه عمرانی دیگر</p>
-          </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          {Array.from({ length: 7 }, (_, i) => (
+            <div key={i}>
+              <img
+                src={`/projects/project${i + 1}.JPG`}
+                alt={`پروژه ${i + 1}`}
+                style={{ width: "300px", borderRadius: "8px" }}
+              />
+              <p>پروژه {i + 1}</p>
+            </div>
+          ))}
         </div>
       </section>
 
