@@ -26,13 +26,13 @@
     header img {
       height: 80px;
       border-radius: 5px;
-      padding: 0;
     }
     header h1 {
       font-size: 2.5rem;
       color: #1e2a38;
       font-weight: 700;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      text-align: center;
     }
     main {
       max-width: 1200px;
@@ -50,10 +50,7 @@
       padding-bottom: 4px;
       font-size: 1.5rem;
     }
-    ul {
-      padding-left: 1.2rem;
-      list-style-type: disc;
-    }
+    ul { padding-left: 1.2rem; list-style-type: disc; }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -71,32 +68,30 @@
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
-    .projects img {
-      width: 100%;
-      display: block;
-    }
+    .projects img { width: 100%; display: block; }
+
     .contact {
       display: flex;
       justify-content: flex-end;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 2rem;
       padding: 1rem 0;
-      align-items: center;
-      text-align: right;
+      text-align: center;
     }
     .contact div {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 0.5rem;
+      min-width: 80px;
     }
-    .contact img {
-      height: 32px;
-      width: 32px;
-    }
-    @media (max-width: 600px) {
+    .contact img { height: 32px; width: 32px; }
+    .contact span { font-size: 0.95rem; color: #2c3e50; }
+
+    @media (max-width: 768px) {
       header { flex-direction: column; }
       header h1 { text-align: center; }
-      .contact { flex-direction: column; gap: 1rem; }
+      .contact { justify-content: center; }
     }
   </style>
 </head>
@@ -123,15 +118,3 @@
       <div><img src="public/projects/project3.jpg" alt="پروژه 3"></div>
       <div><img src="public/projects/project4.jpg" alt="پروژه 4"></div>
       <div><img src="public/projects/project5.jpg" alt="پروژه 5"></div>
-      <div><img src="public/projects/project6.jpg" alt="پروژه 6"></div>
-      <div><img src="public/projects/project7.jpg" alt="پروژه 7"></div>
-    </div>
-  </section>
-
-  <section class="contact">
-    <div>
-      <img src="public/icons/phone.png" alt="تلفن">
-      <span>066-33208608</span>
-    </div>
-    <div>
-      <img sr
